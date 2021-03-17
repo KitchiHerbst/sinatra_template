@@ -1,0 +1,18 @@
+<h1>Index of all Users</h1>
+</br>
+<ul>
+<% @users.each do | user | %>
+    <a href="/users/<%=user.id%>"> <li> <%=user.name %> </li></a>
+<% end %>
+</ul>
+
+<br>
+
+<form method="post" action="/users">
+<label>Create a new User</label>
+<input type="submit">
+</form>
+
+
+
+

@@ -1,0 +1,17 @@
+<h1> this is our new shows page </h1>
+
+
+<form action ="/show/new" method="post">
+<label> User </label>
+<select name="user_id">
+<% @users.each do  | user | %>
+    <option value=<%= user.id%> >  <%= user.name%>    </option>
+<% end %>
+</select>
+<br>
+<label> Name of Show </label>
+<input type= "text" name="name">
+<br>
+<input type="submit">
+
+</form>

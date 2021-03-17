@@ -1,0 +1,11 @@
+<h1> Delete Shows </h1>
+
+<form action="show/:id" method="delete">
+
+<option>
+<% @shows.each do |show| %>
+ <%=show.name%> 
+</br>
+<%end%>
+</option>
+</form>

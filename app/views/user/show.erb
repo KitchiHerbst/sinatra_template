@@ -1,0 +1,33 @@
+<h1> This is our user show page</h1>
+
+</br>
+
+<h3> Name: <%= @user.name %> </br> Age: <%= @user.age %> </h3>
+
+</br>
+<h3>Favorite Tv Shows</h3>
+
+<ul>
+<% @shows.each do |show| %>
+  <li>  <%= show.name %> </li>
+<%end%>
+</ul>
+
+<form action="/users/<%=@user.id%>" method='post'>
+<input type="hidden" name="_method" value ='delete'>
+<input type="submit" value="delete user">
+</form>
+
+<form action="/users/<%=@user.id%>/edit" method='post'>
+<input type="submit" name="submit" value="Edit User">
+</form>
+
+
+<a href="/show/new"> Add Show </a>
+</br>
+<a href="/show/<%=@user.id%>"> Delete Show </a>
+
+
+
+
+
